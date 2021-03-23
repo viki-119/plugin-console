@@ -1,0 +1,45 @@
+{
+	"name": "plugin-console",
+	"displayName": "张大伟",
+	"publisher": "elo73yaaszryil2chxa64bejl455v77j5yhgu5j75penucshxnfa",
+	"description": "用于美化控制台打印出炫丽多彩的log",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.54.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:plugin-console.helloWorld"
+	],
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/viki-119/plugin-console.git"
+  },
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "plugin-console.helloWorld",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.54.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
+}
