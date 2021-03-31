@@ -3,7 +3,7 @@
 	"displayName": "张大伟",
 	"publisher": "zdw",
 	"description": "用于美化控制台打印出炫丽多彩的log",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
