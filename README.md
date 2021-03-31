@@ -1,6 +1,6 @@
 # plugin-console README
 
-This is the README for your extension "plugin-console". After writing up a brief description, we recommend including the following sections.
+此插件重在美化控制台打印出绚丽多彩的log日志
 
 ## Features
 

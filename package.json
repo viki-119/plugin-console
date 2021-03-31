@@ -1,7 +1,7 @@
 {
 	"name": "plugin-console",
 	"displayName": "张大伟",
-	"publisher": "elo73yaaszryil2chxa64bejl455v77j5yhgu5j75penucshxnfa",
+	"publisher": "zdw",
 	"description": "用于美化控制台打印出炫丽多彩的log",
 	"version": "0.0.1",
 	"engines": {
@@ -11,18 +11,26 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:plugin-console.helloWorld"
+		"onCommand:console.insert"
 	],
 	"repository": {
-    "type": "git",
-    "url": "git+https://github.com/viki-119/plugin-console.git"
-  },
+		"type": "git",
+		"url": "git+https://github.com/viki-119/plugin-console.git"
+	},
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "plugin-console.helloWorld",
-				"title": "Hello World"
+				"command": "console.insert",
+				"title": "plugin-console"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "console.insert",
+				"key": "ctrl+shift+;",
+				"mac": "cmd+shift+;",
+				"when": "editorTextFocus"
 			}
 		]
 	},
