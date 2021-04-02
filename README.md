@@ -1,20 +1,21 @@
 # plugin-console README
 
-此插件重在美化控制台打印出绚丽多彩的log日志
+此插件重在美化控制台打印出绚丽多彩的log日志;
+安装插件成功之后, 在vscode中选中你要打印的对象, 或者不选中也可以, 使用快捷键
+mac："cmd + shift + ;"
+window: "ctrl + shift + ;"
+此时会在当前行的下一行,随机生成一段打印代码如:
+console.log('%c 💻object💻: ', 'color: MidnightBlue; background: DeepPink; font-size: 20px;', object);
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
+待升级
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+暂无依赖
 
 ## Extension Settings
 
