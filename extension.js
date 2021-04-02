@@ -53,7 +53,7 @@ function activate(context) {
 			}
 			const icons = ["🍏", "🍎", "🐶", "🐭", "❤️", "❤️", "👍", "🐘", "🌈", "🍌", "🌽", "🇨🇳", "💻"];
 			const icon = icons[Math.floor(Math.random() * icons.length)];
-			const logToInsert = `console.log('%c ${icon}${str}${icon}: ','color: ${color}; background: ${backgroundColor}; font-size: 20px;',${text});`;
+			const logToInsert = `console.log('%c ${icon}${str}${icon}:', 'color: ${color}; background: ${backgroundColor}; font-size: 20px;', ${text});`;
 			insertText(logToInsert);
 		})
 		: insertText('console.log();');
