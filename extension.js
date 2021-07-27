@@ -41,22 +41,25 @@ function activate(context) {
 
 		const selection = editor.selection;
 		const text = editor.document.getText(selection);
+
+		const colors = ['MidnightBlue', 'Aquamarine', "LightPink", "DeepPink", "Orchid", "Indigo", "CornflowerBlue", "MediumSpringGreen", "Yellow", "DarkOrange", "DarkGray"];
+		let color = colors[Math.floor(Math.random() * colors.length)];
+		let backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+		if (color === backgroundColor) {
+			color = colors[0];
+			backgroundColor = colors[1];
+		}
+
+		const icons = ["🍏", "🍎", "🐶", "🐭", "❤️", "❤️", "👍", "🐘", "🌈", "🍌", "🌽", "🇨🇳", "💻"];
+		const icon = icons[Math.floor(Math.random() * icons.length)];
+	
 		text ? vscode.commands.executeCommand('editor.action.insertLineAfter')
 		.then(() => {
 			const str = `${text}`.replace(/\'|\"/g,'');
-			const colors = ['MidnightBlue', 'Aquamarine', "LightPink", "DeepPink", "Orchid", "Indigo", "CornflowerBlue", "MediumSpringGreen", "Yellow", "DarkOrange", "DarkGray"];
-			let color = colors[Math.floor(Math.random() * colors.length)];
-			let backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-			if (color === backgroundColor) {
-				color = colors[0];
-				backgroundColor = colors[1];
-			}
-			const icons = ["🍏", "🍎", "🐶", "🐭", "❤️", "❤️", "👍", "🐘", "🌈", "🍌", "🌽", "🇨🇳", "💻"];
-			const icon = icons[Math.floor(Math.random() * icons.length)];
 			const logToInsert = `console.log('%c ${icon}${str}${icon}:', 'color: ${color}; background: ${backgroundColor}; font-size: 20px;', ${text});`;
 			insertText(logToInsert);
 		})
-		: insertText('console.log();');
+		: insertText(`console.log('%c ${icon}嘿嘿${Math.floor(Math.random()*100)}${icon}:', 'color: ${color}; background: ${backgroundColor}; font-size: 20px;', )`);
 	});
 
 	context.subscriptions.push(disposable);
